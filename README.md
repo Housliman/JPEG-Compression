@@ -217,16 +217,19 @@ La compression JPEG repose sur la conversion des données spatiales des pixels e
 ### 1. Décalage de Niveau
 
 Les pixels sont stockés sous forme d'entiers 8 bits non signés ($[0, 255]$). Nous les décalons pour les centrer autour de zéro :
+
 $$P_{décalé} = P_{original} - 128$$
 
 ### 2. Transformée en Cosinus Discrète (DCT)
 
 La DCT 2D convertit un bloc de $8 \times 8$ pixels $f(x, y)$ en un bloc de coefficients de fréquence $F(u, v)$ :
+
 $$F(u, v) = \frac{1}{4} C(u) C(v) \sum_{x=0}^{7} \sum_{y=0}^{7} f(x, y) \cos \left[ \frac{(2x+1)u\pi}{16} \right] \cos \left[ \frac{(2y+1)v\pi}{16} \right]$$
 
 ### 3. Quantification (L'étape avec perte)
 
 Chaque coefficient DCT est divisé par une valeur correspondante de la **Table de Quantification** ($Q$) et arrondi :
+
 $$F_{quantifié}(u, v) = \text{round} \left( \frac{F(u, v)}{Q(u, v)} \right)$$
 
 ### 4. Reconstruction (IDCT)
