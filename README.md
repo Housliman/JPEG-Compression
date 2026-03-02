@@ -7,7 +7,8 @@
 An interactive web application designed to explain the inner workings of JPEG compression. This tool visualizes the step-by-step process of converting an image into the frequency domain, applying quantization, and reconstructing it, all while demonstrating the trade-offs between image quality and file size.
 
 ### 🎥 Video Explanation
-https://raw.githubusercontent.com/Housliman/JPEG-Compression/main/videos/JPEGCompression.mp4
+
+https://github.com/user-attachments/assets/7cd3326e-241e-40fd-a5d2-af172134318a
 
 ## 🚀 Features
 
@@ -149,7 +150,10 @@ MIT License - feel free to use this for educational purposes!
 Une application web interactive conçue pour expliquer le fonctionnement interne de la compression JPEG. Cet outil visualise le processus étape par étape de la conversion d'une image dans le domaine fréquentiel, de l'application de la quantification et de sa reconstruction, tout en démontrant les compromis entre la qualité de l'image et la taille du fichier.
 
 ### 🎥 Explication Vidéo
-https://github.com/Housliman/JPEG-Compression/raw/main/videos/CompressionJPEG.mp4
+
+https://github.com/user-attachments/assets/c8658bd7-f07f-4ba2-bcb7-a96e65dd75e4
+
+
 
 ## 🚀 Caractéristiques
 
