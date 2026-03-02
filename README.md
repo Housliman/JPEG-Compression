@@ -1,10 +1,13 @@
 # JPEG Compression Visualizer
 
-![JPEG Visualizer Screenshot](https://github.com/Housliman/JPEG-Compression/blob/main/Pasted%20image%2020260302160706.png)
+![JPEG Visualizer Screenshot](Pasted%20image%2020260302160706.png)
 
 [Français](#visualiseur-de-compression-jpeg-version-française) | [English](#jpeg-compression-visualizer)
 
 An interactive web application designed to explain the inner workings of JPEG compression. This tool visualizes the step-by-step process of converting an image into the frequency domain, applying quantization, and reconstructing it, all while demonstrating the trade-offs between image quality and file size.
+
+### 🎥 Video Explanation
+https://github.com/Housliman/JPEG-Compression/raw/main/videos/JPEGCompression.mp4
 
 ## 🚀 Features
 
@@ -139,9 +142,14 @@ MIT License - feel free to use this for educational purposes!
 
 # Visualiseur de Compression JPEG (Version Française)
 
+![JPEG Visualizer Screenshot](Pasted%20image%2020260302160706.png)
+
 [English](#jpeg-compression-visualizer) | [Français](#visualiseur-de-compression-jpeg-version-française)
 
 Une application web interactive conçue pour expliquer le fonctionnement interne de la compression JPEG. Cet outil visualise le processus étape par étape de la conversion d'une image dans le domaine fréquentiel, de l'application de la quantification et de sa reconstruction, tout en démontrant les compromis entre la qualité de l'image et la taille du fichier.
+
+### 🎥 Explication Vidéo
+https://github.com/Housliman/JPEG-Compression/raw/main/videos/CompressionJPEG.mp4
 
 ## 🚀 Caractéristiques
 
