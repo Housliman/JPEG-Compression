@@ -1,6 +1,6 @@
 # JPEG Compression Visualizer
 
-![[Pasted image 20260302160706.png]]
+![JPEG Visualizer Screenshot](screenshot.png)
 
 [Français](#visualiseur-de-compression-jpeg-version-française) | [English](#jpeg-compression-visualizer)
 
