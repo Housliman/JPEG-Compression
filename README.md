@@ -88,13 +88,17 @@ JPEG compression relies on converting spatial pixel data into frequency data. He
 ### 1. Level Shifting
 
 Pixels are typically stored as unsigned 8-bit integers ($[0, 255]$). Before processing, we shift them to be centered around zero:
+
 $$P_{shifted} = P_{original} - 128$$
+
 This centers the dynamic range and improves the efficiency of the DCT.
 
 ### 2. Discrete Cosine Transform (DCT)
 
 The 2D-DCT converts an $8 \times 8$ block of pixels $f(x, y)$ into an $8 \times 8$ block of frequency coefficients $F(u, v)$:
+
 $$F(u, v) = \frac{1}{4} C(u) C(v) \sum_{x=0}^{7} \sum_{y=0}^{7} f(x, y) \cos \left[ \frac{(2x+1)u\pi}{16} \right] \cos \left[ \frac{(2y+1)v\pi}{16} \right]$$
+
 where:
 
 - $u, v$ are horizontal and vertical frequencies ($0 \leq u, v < 8$).
@@ -105,14 +109,18 @@ where:
 ### 3. Quantization (The "Lossy" Step)
 
 This is where compression actually happens. Each DCT coefficient is divided by a corresponding value from the **Quantization Table** ($Q$) and rounded:
+
 $$F_{quantized}(u, v) = \text{round} \left( \frac{F(u, v)}{Q(u, v)} \right)$$
 High-frequency components (bottom-right of the matrix) usually have large values in $Q$, forcing many $F_{quantized}$ values to zero. This "zeroing out" is why JPEG files are so small after entropy encoding (like Huffman coding).
 
 ### 4. Reconstruction (IDCT)
 
 To display the image, we reverse the quantization:
+
 $$F_{dequantized}(u, v) = F_{quantized}(u, v) \times Q(u, v)$$
+
 And then apply the **Inverse DCT**:
+
 $$f(x, y) = \frac{1}{4} \sum_{u=0}^{7} \sum_{v=0}^{7} C(u) C(v) F_{dequantized}(u, v) \cos \left[ \frac{(2x+1)u\pi}{16} \right] \cos \left[ \frac{(2y+1)v\pi}{16} \right]$$
 
 ## 📖 How JPEG Compression Works (As Visualized)
@@ -223,7 +231,13 @@ $$F_{quantifié}(u, v) = \text{round} \left( \frac{F(u, v)}{Q(u, v)} \right)$$
 
 ### 4. Reconstruction (IDCT)
 
-Pour afficher l'image, nous inversons la quantification et appliquons la DCT inverse (IDCT).
+Pour afficher l'image, nous inversons la quantification :
+
+$$F_{déquantifié}(u, v) = F_{quantifié}(u, v) \times Q(u, v)$$
+
+Appliquez ensuite la **DCT inverse** :
+
+$$f(x, y) = \frac{1}{4} \sum_{u=0}^{7} \sum_{v=0}^{7} C(u) C(v) F_{déquantifié}(u, v) \cos \left[ \frac{(2x+1)u\pi}{16} \right] \cos \left[ \frac{(2y+1)v\pi}{16} \right]$$
 
 ## 📖 Comment fonctionne la compression JPEG (Visualisé)
 
