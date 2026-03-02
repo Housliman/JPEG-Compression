@@ -1,5 +1,9 @@
 # JPEG Compression Visualizer
 
+![[Pasted image 20260302160706.png]]
+
+[Français](#visualiseur-de-compression-jpeg-version-française) | [English](#jpeg-compression-visualizer)
+
 An interactive web application designed to explain the inner workings of JPEG compression. This tool visualizes the step-by-step process of converting an image into the frequency domain, applying quantization, and reconstructing it, all while demonstrating the trade-offs between image quality and file size.
 
 ## 🚀 Features
@@ -105,16 +109,14 @@ $$f(x, y) = \frac{1}{4} \sum_{u=0}^{7} \sum_{v=0}^{7} C(u) C(v) F_{dequantized}(
 4.  **Quantization**: This is the "lossy" part. Each frequency coefficient is divided by a value from a **Quantization Table** and rounded to the nearest integer. High-frequency details are usually quantized more aggressively because the human eye is less sensitive to them.
 5.  **Reconstruction (IDCT)**: To show the result, the process is reversed using the Inverse Discrete Cosine Transform (IDCT) to turn frequencies back into viewable pixels.
 
-## 📸 Screenshots
-
-![[Pasted image 20260302160706.png]]
-
 ## 📄 License
 MIT License - feel free to use this for educational purposes!
 
 ---
 
 # Visualiseur de Compression JPEG (Version Française)
+
+[English](#jpeg-compression-visualizer) | [Français](#visualiseur-de-compression-jpeg-version-française)
 
 Une application web interactive conçue pour expliquer le fonctionnement interne de la compression JPEG. Cet outil visualise le processus étape par étape de la conversion d'une image dans le domaine fréquentiel, de l'application de la quantification et de sa reconstruction, tout en démontrant les compromis entre la qualité de l'image et la taille du fichier.
 
